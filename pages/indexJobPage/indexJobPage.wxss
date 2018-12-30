@@ -1,0 +1,18 @@
+.main{
+  text-align:center;
+  justify-content:  center ;
+  align-content: center;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:22px;
+  border-radius: 3px;
+  justify-content:  center ;
+  align-content: center;
+  overflow: hidden;
+  background: #eeee;
+}
+.compIcn{
+  border-radius: 50%;
+}

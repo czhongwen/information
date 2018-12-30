@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view style='display:flex' >
+      <view style='width:{{0.32*width}}px;'>
+          <view class="userinfo">
+              <!--求职-->
+              <image bindtap="bindJobTap" class="userinfo-avatar" src="../icons/job.PNG" mode="cover"></image>
+              <text class="userinfo-nickname">求职</text>
+          </view>
+      </view>
+      <view style='width:{{0.32*width}}px;'>
+          <view class="userinfo">
+              <!--租房-->
+              <image bindtap="bindHourseTap" class="userinfo-avatar" src="../icons/house.PNG" mode="cover"></image>
+              <text class="userinfo-nickname">租房</text>
+          </view>
+      </view>
+      <view style='width:{{0.32*width}}px;'>
+          <view class="userinfo">
+              <!--恋爱-->
+              <image bindtap="bindLoveTap" class="userinfo-avatar" src="../icons/love.PNG" mode="cover"></image>
+              <text class="userinfo-nickname">相亲</text>
+          </view>
+      </view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
