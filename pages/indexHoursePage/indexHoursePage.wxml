@@ -1,5 +1,10 @@
-<view class="main">
-    <view class="item item1">1</view>
-    <view class="item item2">2</view>
-    <view class="item item3">3</view>
-  </view>
+<view  style='margin-left:{{0.01*width}}px;width:{{0.98*width}}px;line-height:{{height}}px;'>
+    <view>
+      <input placeholder='请输入地点或公司名称' style='background:#eeee;border-radius:10px;height:{{0.06*height}}px'></input>
+    </view>
+    <view class='content' style="height:{{height*0.95}}px;margin-top:{{height*0.05}}px">
+      <block wx:for="{{arr}}" wx:key="arr" wx:for-item="item" >
+        <view class='compIcn' animation='{{animationData}}' bindtap='onShowCanvas' style='margin:{{item.margin}}px;width:{{item.width}}px;height:{{item.width}}px;background:{{item.color}}'></view>
+      </block>
+    </view>
+</view>

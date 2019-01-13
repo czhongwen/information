@@ -1,10 +1,24 @@
 <view  style='margin-left:{{0.01*width}}px;width:{{0.98*width}}px;line-height:{{height}}px;'>
     <view>
-      <input placeholder='请输入公司' style='background:#eeee;border-radius:10px;height:{{0.06*height}}px'></input>
+      <input placeholder='请输入公司' bindinput='companyName' style='background:#eeee;border-radius:10px;height:{{0.06*height}}px' confirm-type='search'></input>
     </view>
-    <view class='content' style="height:{{height*0.8}}px;">
+
+    <!--主体内容  公司logo-->
+    <view class='content' style="height:{{height*0.91}}px;margin-top:{{height*0.03}}px">
       <block wx:for="{{arr}}" wx:key="arr" wx:for-item="item" >
-        <view class='compIcn' animation='{{animationData}}' bindtap='onShowCanvas' style='margin:{{item.margin}}px;width:{{item.width}}px;height:{{item.width}}px;background:{{item.color}}'></view>
+        <view class='compIcn' animation='{{animationData}}' bindtap='onShowCanvas' style='margin:{{item.margin}}px;width:{{item.width}}px;height:{{item.width}}px;line-height:{{item.width}}px'>
+          <image src='{{item.url}}' bindtap='tapCompanyLogo' style='width:100%;height:100%'></image>
+        </view>
       </block>
+    </view>
+
+    <!--上一页-->
+    <view style='position:absolute;top:50%;height:50px;width:50px;line-height:50px;'>
+      <image src='../icons/left.png' bindtap='prvPage' style='height:100%;width:100%'></image>
+    </view>
+
+    <!--下一页-->
+    <view style='position:absolute;top:50%;right:0px;height:50px;width:50px;line-height:50px;'>
+      <image src='../icons/right.png' bindtap='nextPage' style='height:100%;width:100%'></image>
     </view>
 </view>
